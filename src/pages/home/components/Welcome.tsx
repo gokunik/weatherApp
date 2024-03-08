@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import styles from "./style.module.css";
+import { Link } from "react-router-dom";
 
 export const Welcome: React.FC = () => {
   return (
@@ -23,7 +24,19 @@ export const Welcome: React.FC = () => {
             Reactjs. Also experienced in creating REST APIs and backend using
             Nodejs and express js.
           </p>
-          <p className="mb-4 font-lato">About the Assignment</p>
+          <p className="mb-4 font-lato">
+            Find the assignment link in the top menu bar. or click{" "}
+            <Link className="text-blue-900" to="/weatherApp">
+              here
+            </Link>
+            . I have used openweather API to fetch latest weather data, pexels
+            API to fetch images for the current location selected by the user
+            and geo location API to fetch cities based on user input.
+          </p>
+          <p>
+            For UI I have used material tailwindcss and framer motion for
+            animation.
+          </p>
         </div>
       </motion.div>
     </section>
