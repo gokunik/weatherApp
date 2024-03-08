@@ -4,9 +4,11 @@ import { ForecastItem } from "@/types/weatherApiType";
 export const ForecastSection: React.FC<{ forecaseData: ForecastItem[] }> = ({
   forecaseData,
 }) => {
-  const filteredData = forecaseData.filter(
-    (item) => new Date(item.dt_txt).getDate() === new Date().getDate()
-  );
+  const filteredData = forecaseData
+    .filter((item) => new Date(item.dt_txt).getDate() === new Date().getDate())
+    .filter((item) => {
+      return new Date(item.dt_txt).getHours() >= new Date().getHours();
+    });
 
   const data = filteredData.map((item) => {
     return {
@@ -17,13 +19,17 @@ export const ForecastSection: React.FC<{ forecaseData: ForecastItem[] }> = ({
   });
 
   return (
-    <div className="bg-[#003339] flex justify-center rounded-3xl p-4 max-h-24">
+    <div
+      className={`bg-[#003339] ${
+        data.length < 4 ? "justify-center" : ""
+      } flex rounded-3xl p-4 max-h-24 overflow-y-auto`}
+    >
       {data.length === 0 ? (
         <div className="w-full h-full flex justify-center items-center">
           No forecaste data available
         </div>
       ) : (
-        <div className="flex">
+        <div className="flex ">
           {data.map((item) => {
             return (
               <div

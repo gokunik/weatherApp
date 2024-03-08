@@ -11,7 +11,7 @@ export const WeatherForecast: React.FC<{
       <h2 className="text-[#003339] font-serif font-semibold px-4">
         Weather Forecast
       </h2>
-      <div className=" flex rounded-3xl flex-wrap md:flex-nowrap justify-between gap-2 p-4 max-w-96 max-h-96 overflow-x-auto">
+      <div className="grid grid-cols-3 md:flex gap-4 p-4 max-h-96 overflow-x-auto">
         {data.map((item) => {
           return (
             <div
