@@ -122,10 +122,10 @@ export const Assignment: React.FC = () => {
               }}
               photoIsLoading={photoLoading}
             />
-            <div className="mt-4">
+            <div className="mt-8 md:mt-4">
               <ForecastSection forecaseData={weatherData[1].list} />
             </div>
-            <div className="my-5 border-y">
+            <div className="my-8 border-y">
               <AdditionalData data={weatherData[0]} />
             </div>
             <div className="mt-4">

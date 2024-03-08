@@ -25,7 +25,7 @@ export const Head: React.FC<{
   };
 
   return (
-    <div className="flex gap-2 justify-between px-4 mt-5">
+    <div className="flex gap-2 justify-between px-4 mt-6 md:mt-5">
       <div className="font-serif max-w-[50%]">
         <h1 className="text-3xl font-bold text-[#003339]">
           {info.locationData.label.length < 15
