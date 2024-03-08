@@ -13,9 +13,10 @@ export const TopBar: React.FC<{ onSearchChange: OnSearchChange }> = ({
   return (
     <nav className="top-bar p-3">
       <div className="flex gap-4 h-10 justify-between items-center">
-        <svg className="w-6 h-6 text-black">
+        {/* <svg className="w-6 h-6 text-black">
           <use href={`${menuIcon}#menuIcon`} />
-        </svg>
+        </svg> */}
+        <img src={menuIcon} className="w-6 h-6 text-black" alt="" />
         <div className="flex  items-center gap-5">
           <AnimatePresence mode="wait">
             {!isSearchActive && (
@@ -31,12 +32,15 @@ export const TopBar: React.FC<{ onSearchChange: OnSearchChange }> = ({
             )}
           </AnimatePresence>
 
-          <svg
-            className="w-6 h-6 text-black relative top-[1px]"
-            onClick={() => setIsSearchActive(!isSearchActive)}
-          >
+          {/* <svg className="w-6 h-6 text-black relative top-[1px]">
             <use href={`${searchIcon}#searchIcon`} />
-          </svg>
+          </svg> */}
+          <img
+            src={searchIcon}
+            className="w-5 h-5 text-black"
+            alt=""
+            onClick={() => setIsSearchActive(!isSearchActive)}
+          />
         </div>
       </div>
     </nav>
