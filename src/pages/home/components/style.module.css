@@ -1,0 +1,19 @@
+.navbar-wrapper {
+  @apply sticky top-0 z-10 h-max !max-w-full !rounded-none px-4 py-2 lg:px-3 lg:!py-3;
+}
+
+.navbar-innerContainer {
+  @apply container mx-auto flex items-center justify-between text-blue-gray-900;
+}
+
+.icon-button {
+  @apply ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden;
+}
+
+.welcome-section-wrapper {
+  @apply h-full grow grid place-content-center bg-[whitesmoke] p-3;
+}
+
+.welcome-section-content {
+  @apply container bg-white rounded shadow p-6 cursor-pointer hover:shadow-md transition-shadow md:w-[740px];
+}
