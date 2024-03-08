@@ -1,30 +1,18 @@
-# React + TypeScript + Vite
+# Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This weather app assignment is created for the role of frontend developer at HomeLLC by Nitesh Khatri
 
-Currently, two official plugins are available:
+Contanct:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Email: niteshkhatri2226@gmail.com
 
-## Expanding the ESLint configuration
+[LinkedIn](https://www.linkedin.com/in/gokunik/)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## About the app
 
-- Configure the top-level `parserOptions` property like this:
+Below are the features of the app
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Ability to search cities, A dropdown will be shown with the matching city name. Fetched using geo location API
+- Display live weather data fetched from the Open Weather API
+- Display a random picture for the region selected by the user.
+- Fully responsive, works on mobile and desktop
