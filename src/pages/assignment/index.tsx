@@ -78,6 +78,7 @@ export const Assignment: React.FC = () => {
 
   useEffect(() => {
     if (!photoDataIsFetching && !weatherDataIsFetching) {
+      if (photoData === undefined) return;
       const randomIndex = Math.floor(Math.random() * photoData.photos.length);
       setPhotoURL(photoData.photos[randomIndex].src.large2x);
     }

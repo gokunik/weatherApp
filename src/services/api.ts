@@ -6,9 +6,9 @@ import axios from "axios";
 const WEATHER_API_URL = "https://api.openweathermap.org/data/2.5/";
 const GEO_API_URL = "https://wft-geo-db.p.rapidapi.com/v1/geo/";
 
-import { createClient } from "pexels";
+// import { createClient } from "pexels";
 
-const client = createClient(import.meta.env.VITE_PIXELS_API_KEY);
+// const client = createClient(import.meta.env.VITE_PIXELS_API_KEY);
 
 const weatherInstance = axios.create({
   baseURL: WEATHER_API_URL,
@@ -19,6 +19,13 @@ const geoInstance = axios.create({
   headers: {
     "X-RapidAPI-Key": import.meta.env.VITE_GEO_DATA_API,
     "X-RapidAPI-Host": "wft-geo-db.p.rapidapi.com",
+  },
+});
+
+const photoInstance = axios.create({
+  baseURL: "https://api.pexels.com/v1/",
+  headers: {
+    Authorization: import.meta.env.VITE_PIXELS_API_KEY,
   },
 });
 
@@ -59,9 +66,13 @@ export const getGeoData = async (locationInput: any) => {
 };
 
 export const getPhotos = async (query: any) => {
-  return (await client.photos.search({
-    query,
-    per_page: 50,
-    orientation: "landscape",
-  })) as any;
+  return photoInstance
+    .get(`search?query=${query}&per_page=50&page=1&orientation=landscape`)
+    .then((response) => response.data);
+
+  // return (await client.photos.search({
+  //   query,
+  //   per_page: 50,
+  //   orientation: "landscape",
+  // })) as any;
 };
