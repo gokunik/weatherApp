@@ -125,7 +125,7 @@ export const Assignment: React.FC = () => {
             <div className="mt-8 md:mt-4">
               <ForecastSection forecaseData={weatherData[1].list} />
             </div>
-            <div className="my-8 border-y">
+            <div className="my-6 md:my-4 border-y">
               <AdditionalData data={weatherData[0]} />
             </div>
             <div className="mt-4">
