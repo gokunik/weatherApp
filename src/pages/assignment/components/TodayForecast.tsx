@@ -21,11 +21,11 @@ export const ForecastSection: React.FC<{ forecaseData: ForecastItem[] }> = ({
   return (
     <div
       className={`bg-[#003339] ${
-        data.length < 4 ? "justify-center" : ""
+        data.length < 5 ? "justify-center" : ""
       } flex rounded-3xl p-4 max-h-24 overflow-y-auto`}
     >
       {data.length === 0 ? (
-        <div className="w-full h-full flex justify-center items-center">
+        <div className="text-white w-full h-full flex justify-center items-center">
           No forecaste data available
         </div>
       ) : (

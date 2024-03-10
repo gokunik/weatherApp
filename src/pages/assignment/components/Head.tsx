@@ -27,15 +27,26 @@ export const Head: React.FC<{
   return (
     <div className="flex gap-2 justify-between px-4 mt-6 md:mt-5">
       <div className="font-serif max-w-[50%]">
-        <h1 className="text-3xl font-bold text-[#003339]">
-          {info.locationData.label.length < 15
-            ? info.locationData.label
-            : info.locationData.region}
+        <h1
+          className={`
+          ${info.locationData.label.length > 10 && "text-2xl"}
+          ${info.locationData.label.length > 15 && "text-xl"}
+          ${info.locationData.label.length > 20 && "text-md"}
+          
+          text-3xl font-bold text-[#003339]`}
+        >
+          {info.locationData.label}
         </h1>
-        <p className="text-xl">{info.locationData.country}</p>
+        <p
+          className={`${
+            info.locationData.country.length > 10 ? "text-sm" : "text-xl"
+          } mt-1`}
+        >
+          {info.locationData.country}
+        </p>
         <p className="text-sm text-gray-600">{getCurrentDate()}</p>
-        <p className="flex gap-2 items-center mt-2">
-          <span>{info.weatherData.temperature}</span>
+        <p className=" mt-2">{info.weatherData.temperature} °C</p>
+        <p className="flex gap-2 items-center">
           {info.weatherData.description}{" "}
           <span>
             <WeatherIcon
