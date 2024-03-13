@@ -100,7 +100,7 @@ export const Assignment: React.FC = () => {
         {photoDataIsLoading ||
         weatherDataIsLoading ||
         weatherData === undefined ? (
-          <Spinner width="100%" height="100px" />
+          <Spinner width="100px" height="100px" />
         ) : (
           <div className="relative w-full min-h-screen md:h-min md:min-h-max md:max-w-[500px] shadow-lg p-1 md:px-4 md:py-2  mx-autoh-full bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm md:bg-opacity-95 bg-opacity-100 border border-gray-100">
             {weatherDataIsFetching && (
