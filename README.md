@@ -1,9 +1,5 @@
 # Weather App
 
-This weather app assignment is created for the role of frontend developer at HomeLLC by Nitesh Khatri
-
-Contanct:
-
 Email: niteshkhatri2226@gmail.com
 
 [LinkedIn](https://www.linkedin.com/in/gokunik/)
